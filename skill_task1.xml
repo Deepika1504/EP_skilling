@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="skill_task1.xsl"?>
+<!DOCTYPE students SYSTEM "skill_task1.dtd">
+<students>
+<student sid="a">
+<no>id="121"</no>
+<name>RIA</name>
+<email>ria.khan@gmail.com</email>
+<marks>87</marks>
+<class>A</class>
+</student>
+<student sid="b">
+<no>id="122"</no>
+<name>YAGNA</name>
+<email>ria.khan@gmail.com</email>
+<marks>87</marks>
+<class>A</class>
+</student>
+<student sid="c">
+<no>id="123"</no>
+<name>ELENA</name>
+<email>elena.khan@gmail.com</email>
+<marks>85</marks>
+<class>A</class>
+</student>
+<student sid="d">
+<no>id="124"</no>
+<name>STEFAN</name>
+<email>stefan.khan@gmail.com</email>
+<marks>92</marks>
+<class>A</class>
+</student>
+<student sid="e">
+<no>id="125"</no>
+<name>BONNIE</name>
+<email>bonnie.khan@gmail.com</email>
+<marks>77</marks>
+<class>A</class>
+</student>
+
+</students>
