@@ -1,0 +1,51 @@
+<html>
+<head>
+<h1>REGISTRATION FORM</h1>
+<script>
+function validation()
+{
+ var a=document.f2.a.value;
+ var b=document.f2.b.value;
+ var c=document.f2.c.value;
+ var d=document.f2.d.value;
+ var e=document.f2.e.value;
+ var f=document.f2.f.value;
+ if(a==""||b==""||c=="")
+{ 
+ alert("All fields must be filled");
+}
+ else if(a.length<8||b.length<8)
+{
+  alert("Username and Password should be of minimum length 8");
+}
+ else if(!document.f2.d.checked&&!document.f2.e.checked&&!document.f2.f.checked)
+{
+ alert("Checkbox must be chosen");
+}
+
+
+ 
+}
+</script>
+</head>
+<body>
+<form name="f2" onSubmit="validation()" method="post">
+Username:<input type="text" name="a"><br>
+Password:<input type="password" name="b"><br>
+Email:<input type="email" name="c"><br>
+Games:<input type = "checkbox"
+                 id = "chkCricket"
+                 value = "cricket" name="d" />
+             <label for = "chkCricket">Cricket</label>&nbsp
+             <input type = "checkbox"
+                 id = "chkFootBall"
+                 value = "football" name="e" />
+             <label for = "chkFootBall">FootBall</label>&nbsp
+             <input type = "checkbox"
+                 id = "chkChess"
+                 value = "chess" name="f" />
+             <label for = "chkChess">Chess</label><br>
+<input type="submit" value="REGISTER">
+</form>
+</body>
+</html>
