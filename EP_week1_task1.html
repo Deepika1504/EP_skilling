@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+function validation()
+{
+ var a=document.f1.a.value;
+ 
+ var b=document.f1.b.value;
+if(a==""||b==""){
+alert("give proper information");
+}
+else if(a.length<8 && b.length<8){
+alert("Your username and password  must be of minimun length 8");
+}
+else if(a.length<8 ){
+alert("Your username   must be of minimun length 8");
+}
+else if( b.length<8){
+alert("Your password  must be of minimun length 8");
+}
+
+else if(a.length==b.length){
+alert("welcome"+" "+a);
+}
+else{
+alert("welcome"+" "+a);
+}
+
+}
+</script>
+</head>
+<body>
+<form name="f1" onSubmit="validation()" method="post">
+Username:<input type="text" name="a"><br>
+password:<input type="password" name="b"><br>
+<input type="submit" value="login">
+</form>
+</body>
+</html>
