@@ -1,0 +1,58 @@
+<html>
+<title align="centre">Registration page</title>
+<body style="background-color:powderblue;">
+<link rel="stylesheet" type="text/css" href="design.css">
+<h1 align="center">Registration page</h1>
+<head>
+<script>
+function validation(){
+var username=document.f1.user.value;
+var password=document.f1.pswd.value;
+var email=document.f1.mail.value;
+var game=document.f1.games.value;
+if(username.length=""||password.length=""||email.length=""){
+alert("Make sure to fill all the fields must be field");
+}
+else if(username.length<8||password.length<8)
+{
+alert("Username and password must be of minimum length 8");
+}
+
+}
+</script>
+<form method="post" name="f1" onSubmit="validation()">
+<div align="center">
+<table align="centre" style="color:green">
+<tr><td><label>Name Of the Student:</label></td><td><input type="text" name="user"><br></td></tr>
+<tr><td><label>password:</label></td><td><input type="password" name="pswd"><br></td></tr>
+<tr><td><label>Email ID:</label></td><td><input type="email" name="mail"><br></td></tr>
+<tr><td><label>Games:</label></td><td><input type = "checkbox"
+                 id = "chkCricket"
+                 value = "cricket" name="games" />
+             <label for = "chkCricket">Cricket</label>&nbsp
+             <input type = "checkbox"
+                 id = "chkFootBall"
+                 value = "football" />
+             <label for = "chkFootBall">FootBall</label>&nbsp
+             <input type = "checkbox"
+                 id = "chkChess"
+                 value = "chess" />
+             <label for = "chkChess">Chess</label></tr>
+<tr><td><label>Gender:</label></td><td><input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>&nbsp
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br></tr>
+<tr><td><label for="subjects">Fav Subjects:</label></td>&emsp;&emsp; &emsp; &emsp; &emsp; &emsp; <td><select id="subjects" name="subjects">
+   <option value="java">Java</option>
+   <option value="c">C</option>
+   <option value="c++">C++</option>
+   <option value="python">Python</option>
+</select><br><br></td></tr>
+						
+<tr><td><label>Address:</label></td>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<br>&emsp;<td><textarea id="address" name="address" color="gray" rows="7" cols="50">Enter your address</textarea><br><br><br>
+</td></tr>
+<tr><td><input type="submit" value="SignUp"></td></tr>
+</div>
+</form>
+</body>
+</html>
