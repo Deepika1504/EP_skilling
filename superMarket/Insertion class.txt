@@ -1,0 +1,57 @@
+package superMarket;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.*;
+
+
+
+public class Insertion {
+	Scanner sc=new Scanner(System.in);
+	public int Insert(Bean customer) throws ClassNotFoundException, SQLException {
+		Connection con=DBUtil.DBConnection();
+		String sql="insert into sales values(?,?,?)";
+		PreparedStatement ps=con.prepareStatement(sql);
+		ps.setInt(1,customer.getItemid() );
+		ps.setString(2,customer.getItemname());
+		ps.setFloat(3,customer.getCost());
+		int i=ps.executeUpdate();
+		return i;
+	
+
+}
+	public void Display() throws ClassNotFoundException,SQLException{
+		System.out.println("The Item list:");
+		Connection con=DBUtil.DBConnection();
+		PreparedStatement stmt=con.prepareStatement("Select * from sales");
+		ResultSet res=stmt.executeQuery();
+		System.out.println("ItemId\tNAME\tCost");
+		while(res.next())
+		{
+			System.out.println(res.getInt(1)+"\t"+res.getString(2)+"\t"+res.getFloat(3));
+		}
+		
+		con.close();
+		
+	}
+	public void Cost() throws ClassNotFoundException,SQLException{
+		float sum=0;
+		System.out.println("The Total Cost:");
+		Connection con=DBUtil.DBConnection();
+		PreparedStatement stmt=con.prepareStatement("Select sum(cost) from sales");
+		ResultSet res=stmt.executeQuery();
+		while(res.next()) {
+			float c=res.getFloat(1);
+			sum=sum+c;
+		}
+		System.out.println(sum);
+		
+		
+		con.close();
+		
+	}
+	
+		
+	}
+

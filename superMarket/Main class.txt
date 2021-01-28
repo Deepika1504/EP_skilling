@@ -1,0 +1,39 @@
+package superMarket;
+import java.sql.SQLException;
+import java.util.*;
+
+
+
+public class Main {
+	static Scanner sc=new Scanner(System.in);
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
+		Insertion si=new Insertion();
+		Bean b=new Bean();
+		System.out.println("Enter number of Items:");
+		int n=sc.nextInt();
+		int i;
+		for(i=0;i<n;i++) {
+		System.out.println("Enter the Item id:");
+		int id=sc.nextInt();
+		System.out.println("Enter the Item Name:");
+		String name=sc.next();
+		System.out.println("Enter the Item cost:");
+		float cost=sc.nextFloat();
+		b.setItemid(id);
+		b.setItemname(name);
+		b.setCost(cost);
+		si.Insert(b);
+		
+	    
+		}
+	
+	    
+	    	System.out.println("Done with Insertion");
+	    	si.Display();
+	    	si.Cost();
+	    
+
+}
+	
+}
