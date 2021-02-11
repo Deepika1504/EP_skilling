@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+<script>
+function validation(){
+	var regno=document.f2.regno.value;
+	var name=document.f2.name.value;
+	var password=document.f2.password.value;
+	var email=document.f2.email.value;
+	var year=document.f2.year.value;
+	var sec=document.f2.sec.value;
+	if(name.length==""||password.length==""||regno.length==""||email.length==""||sec.length==""||year.length==""){
+		alert("Make sure to fill all the fields");
+		return false;
+		}
+	else if(regno.length!=9)
+		{
+		alert("Please Enter Valid Registration Id");
+		return false;
+		}
+
+
+
+	}
+
+
+</script>
+
+</head>
+<body style="background-color:pink">
+<form method="post" onsubmit="return validation()" action="registration" name="f2">
+
+<div align="center">
+<h1 align="center">Registration</h1>
+<table>
+<tr><td>RegNo</td><td><input type="text" placeholder="Regno" name="regno" required></td></tr>
+<tr><td>Name</td><td><input type="text" placeholder="Enter Your Name" name="name" required></td></tr>
+<tr><td>Email</td><td><input type="email" placeholder="Enter Your Email" name="email" required></td></tr>
+<tr><td>Password</td><td><input type="password" placeholder="Enter Password" name="password" required></td></tr>
+<tr><td>Year</td><td><input type="text" placeholder="Enter Year" name="year" required></td></tr>
+<tr><td>Section</td><td><input type="text" placeholder="Enter Your Section" name="sec" required></td></tr>
+<tr><td><input type="Submit"></td></tr>
+</table>
+<a href="login.html">Already had an account-->SignIn</a>
+</div>
+</form> 
+</body>
+</html>

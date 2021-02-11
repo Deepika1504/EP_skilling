@@ -1,0 +1,48 @@
+<br><!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<script>
+function valid(){
+	var regno=document.f1.regno.value;
+	var name=document.f1.name.value;
+	var password=document.f1.password.value;
+	if(name.length==""||password.length==""||regno.length==""){
+		alert("Make sure to fill all the fields");
+		return false;
+		}
+	else if(regno.length!=9)
+		{
+		alert("Please Enter Valid Registration Id");
+		return false;
+		}
+
+
+
+	}
+
+
+</script>
+</head>
+<body style="background-color:aqua">
+<form method="post" onsubmit="return valid()" action="login" name="f1" >
+<div align="center">
+<h1 align="center">Login</h1>
+<table>
+<tr><td>RegistrationNumber</td><td><input type="text" placeholder="Registration Number" name="regno"></td></tr>
+<tr><td>Name</td><td><input type="text" placeholder="Name" name="name"></td></tr>
+<tr><td>Password</td><td><input type="password" placeholder="Password" name="password"></td></tr>
+<tr><td><input type="submit" value="login"></td>
+<td><a href="./logout">Logout</a></td></tr>
+
+
+
+
+</table>
+</div>
+
+</form>
+
+</body>
+</html>

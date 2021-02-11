@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FeedBack</title>
+<script>
+function val()
+{
+	var f1=document.t1.f1.value;
+	var f2=document.t1.f2.value;
+	var f3=document.t1.f3.value;
+	var f4=document.t1.f4.value;
+	if(!document.t1.f1.checked||!document.t1.f2.checked||document.t1.f3.checked||document.t1.f4.checked)
+		{
+		alert("Please give Your Feedback!");
+		return false;
+		}
+	
+	
+	}
+</script>
+
+</head>
+<body style="background-color:pink">
+<form method="post" action="Feedback" name="t1">
+<div align="center">
+<h1 align="center">Feedback</h1>
+<table>
+<tr><td>Are u able to understand te concepts that were taught</td><td>:
+			<input type="radio" id="good" name="f1" value="good"><label for="good">GOOD</label>
+			<input type="radio" id="better" name="f1" value="better"><label for="better">Better</label>
+			<input type="radio" id="Excellent" name="f1" value="excellent"><label for="excellent">Excellent</label></td></tr>
+<tr><td>My Way of explanation</td><td>:
+			<input type="radio" id="good" name="f2" value="good"><label for="good">GOOD</label>
+			<input type="radio" id="better" name="f2" value="better"><label for="better">Better</label>
+			<input type="radio" id="Excellent" name="f2" value="excellent"><label for="excellent">Excellent</label></td></tr>
+<tr><td>Clearing Doubts Properly?</td><td>:
+			<input type="radio" id="good" name="f3" value="good"><label for="good">GOOD</label>
+			<input type="radio" id="better" name="f3" value="better"><label for="better">Better</label>
+			<input type="radio" id="Excellent" name="f3" value="excellent"><label for="excellent">Excellent</label></td></tr>
+<tr><td>How is my Teaching</td><td>:
+			<input type="radio" id="good" name="f4" value="good"><label for="good">GOOD</label>
+			<input type="radio" id="better" name="f4" value="better"><label for="better">Better</label>
+			<input type="radio" id="Excellent" name="f4" value="excellent"><label for="excellent">Excellent</label></td></tr>
+<tr><td><input type="Submit"></td></tr>
+</table>
+<td><a href="./show">Show</a></td></tr>
+
+</div>
+</form>
+
+</body>
+</html>
